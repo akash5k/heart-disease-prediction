@@ -1,0 +1,69 @@
+.navbar{
+background-color: #2b2d42 !important;
+}
+
+@media (min-width: 1200px) {
+    .container{
+        max-width: 800px;
+    }
+}
+
+.info-color{
+    background-color: #2E2E2E;
+    color: #ffffff;
+}
+
+.info-color-dark{
+    background-color: #212121;
+    color: #ffffff;
+}
+
+
+
+a:link {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+/*   
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  } */
+  
+  a:hover {
+    color: rgb(135, 239, 234);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+/*   
+  a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+  } */
+
+  .hr-up-shadow {
+    border:none;
+    height: 20px;
+       width: 90%;
+      height: 50px;
+      margin-top: 0;
+      border-bottom: 1px solid #1f1209;
+      box-shadow: 0 20px 20px -20px #333;
+    margin: 50px auto 0px; 
+    transform: rotate(180deg)
+  }
+
+  .hr-down-shadow {
+    border:none;
+    height: 20px;
+       width: 90%;
+      height: 50px;
+      margin-top: 0;
+      border-bottom: 1px solid #1f1209;
+      box-shadow: 0 20px 20px -20px #333;
+    margin: -50px auto 40px; 
+  }
+
