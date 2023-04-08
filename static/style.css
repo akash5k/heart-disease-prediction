@@ -1,12 +1,32 @@
-.navbar{
+/* .navbar{
 background-color: #2b2d42 !important;
+} */
+/* .navbar {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+} */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
 }
 
-@media (min-width: 1200px) {
-    .container{
-        max-width: 800px;
-    }
+/* body{
+  animation: transitionIn 0.75s;
 }
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
 
 .info-color{
     background-color: #2E2E2E;
@@ -17,7 +37,6 @@ background-color: #2b2d42 !important;
     background-color: #212121;
     color: #ffffff;
 }
-
 
 
 a:link {
@@ -44,26 +63,51 @@ a:link {
     text-decoration: underline;
   } */
 
-  .hr-up-shadow {
-    border:none;
-    height: 20px;
-       width: 90%;
-      height: 50px;
-      margin-top: 0;
-      border-bottom: 1px solid #1f1209;
-      box-shadow: 0 20px 20px -20px #333;
-    margin: 50px auto 0px; 
-    transform: rotate(180deg)
-  }
+  .opaque-navbar {
+    background-color: rgba(0,0,0,0.5);
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+    height: 60px;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
 
-  .hr-down-shadow {
-    border:none;
-    height: 20px;
-       width: 90%;
-      height: 50px;
-      margin-top: 0;
-      border-bottom: 1px solid #1f1209;
-      box-shadow: 0 20px 20px -20px #333;
-    margin: -50px auto 40px; 
-  }
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
 
+
+.heading{
+  font-size: 3.125rem;
+}
+
+.subheading{
+  font-size: 2.25rem;
+}
+
+.sh4{
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.has{
+  text-align: left;
+  font-size: 1.2rem;
+  color: rgb(83, 83, 83);
+}
+
+strong{
+  font-size: 1.5rem;
+}
+
+.rinfo   {
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+body{
+  font-family: 'Inconsolata', monospace;
+  font-family: 'Nunito Sans', sans-serif;
+}

@@ -7,24 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | HOPE</title>
   <link rel="icon" href="../static/images/page_title_icon.png" type="image/x-icon">
+  <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- custom css -->
   <link rel="stylesheet" href="../static/style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="../static/script.js"></script>
+
+<!-- google-fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans:wght@600&display=swap"
+      rel="stylesheet">
+
 </head>
 
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-dark bg-primary navbar-expand-lg">
+  <nav class="navbar navbar-dark  navbar-expand-lg fixed-top opaque-navbar">
     <a class="navbar-brand" href="#">
       <!-- <img src="your-logo.png" alt="Your Company Logo"> -->
       <h3>HOPE</h3>
@@ -39,10 +38,10 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../static/Data Set descrption.html">About</a>
+          <a class="nav-link" href="../static/about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="../static/LearnMore.html">Learn More</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
@@ -50,6 +49,8 @@
       </ul>
     </div>
   </nav>
+
+
 
   <!-- carousel -->
   <div class="bd-example">
@@ -59,85 +60,104 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner" style=" width:100%; height: 550px !important;">
+      <div class="carousel-inner" style="height: 750px;">
         <div class="carousel-item active">
-          <img src="../static/images/carousel1.jpeg" class="d-block w-100" alt="carousel1">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="d-block w-100 h-100"
+            alt="carousel1">
+          <!-- <img src="../static/images/carousel1.jpeg" class="d-block w-100" alt="carousel1"> -->
+          <div class="carousel-caption d-none d-md-block ">
             <h5>When you need answers</h5>
             <!-- <p>you know where to go</p> -->
           </div>
         </div>
         <div class="carousel-item">
-          <img src="../static/images/carousel2.jpg" class="d-block w-100" alt="...">
-          <div class="carousel-caption d-none d-md-block">
+          <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="d-block w-100 h-100"
+            alt="carousel1">
+          <!-- <img src="../static/images/carousel2.jpg" class="d-block w-100" alt="..."> -->
+          <div class="carousel-caption d-none d-md-block ">
             <h5>Second slide label</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="../static/images/carousel3.jpg" class="d-block w-100" alt="...">
+          <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="d-block w-100 h-100"
+            alt="carousel1">
+          <!-- <img src="../static/images/carousel3.jpg" class="d-block w-100" alt="..."> -->
           <div class="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </div>
         </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+      </div>      
       </a>
-      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+
+
     </div>
   </div>
 
-  <hr class="hr-up-shadow  pt-4 ">
+
 
   <!-- body mid -->
-  <div class="container-fluid pb-4">
+  <div class="container-fluid pt-4 pb-4">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-5 mr-2">
         <image src="../static/images/test your data.jpg" class="rounded mx-auto d-block" width="50%"></image>
       </div>
-      <div class="col-md-6">
-        <h4>Describe</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo earum eum numquam officiis odit
-          laudantium eius doloribus qui reprehenderit, voluptatem veritatis nulla aspernatur? Vitae inventore quasi
-          quidem veritatis vero!
-          Tenetur ipsum totam provident nostrum. Nemo pariatur, praesentium cupiditate voluptatum, iure expedita libero
-          delectus impedit porro molestias dolore sit culpa dicta, sapiente nisi maiores saepe facere debitis officia
-          sed quia.
-          Voluptates fugit quam dolores, error adipisci, obcaecati ad sunt voluptas possimus suscipit dignissimos id
-          exercitationem. Vero necessitatibus nesciunt, sed consequuntur omnis praesentium voluptatem veniam tempora
-          corrupti debitis. Veniam, voluptatum quia.
-          Quo sunt eveniet accusantium. Perspiciatis ea est sequi eos hic. Distinctio quaerat ipsum saepe odit esse
-          minus ut quia, asperiores officia doloribus maiores alias omnis corporis quam, ullam fugiat molestias!
-          Sapiente provident amet distinctio ab nam, sint quia iure soluta alias. Ad doloremque labore repellendus
-          placeat minima iste, in quidem excepturi atque nostrum magnam animi eius doloribus fuga facere. Nesciunt?
-          Deserunt vel magni molestias et nam vero eveniet, odio ullam fugit, inventore maiores ipsa voluptatum corporis
-          quod aperiam, incidunt hic praesentium perspiciatis sint ducimus. Cupiditate quia est itaque asperiores dicta.
+      <div class="col-md-5 ml-2 mr-2 ">
+        <h4>HOPE for Healthy Heart.</h4>
+        <p class="text-justify">A healthy heart is vital for maintaining overall health and wellness. By prioritizing
+          heart health, you can improve your quality of life and reduce the risk of developing other chronic conditions
+          such as diabetes and high blood pressure. Taking steps to maintain a healthy heart is one of the most
+          important things you can do for your overall health and well-being.
+
+          <p class="text-justify">The Heart Observational Predictive Engine takes various user inputs and checks for the presence of heart
+          disease. Based on the inputs, HOPE can predict the likelihood of the presence of heart disease with a high
+          degree of accuracy. If it predicts a high probability of heart disease, the user is advised to seek further
+          medical attention and provide suggestions for preventative measures, such as lifestyle changes and medication
+          to prevent serious health complications.
+
+          To determine the condition of your heart, please complete the form.
         </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae commodi, dolore ipsa sed quae, similique
-          quisquam perspiciatis maxime libero facere ipsum. Quas, facilis accusantium voluptatum consectetur sapiente
-          sunt officiis ex?</p>
+        
       </div>
     </div>
   </div>
 
 
-  <hr class="hr-down-shadow pt-4">
-
-
-  <div class="container pt-4 pb-4">
-    <h3 class="d-flex justify-content-center">FORM</h3>
-  </div>
-  <!-- form -->
-  <div class="container card">   
+  <div class="container card shadow-lg p-3 mb-5 bg-white rounded ">
+    <div class="container pt-4 ">
+      <div class="text-center ">
+        <h3>FORM</h3>
+        <!-- pill trigger modal -->
+        <span class="badge badge-pill badge-primary " data-toggle="modal"
+          data-target="#exampleModalScrollable">Information</span>
+        <hr>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- form -->
     <!-- Action is where the data is sent. In our case, predict page.
      If action is omitted, it assumed to be the current page -->
-    <form action="{{ url_for('predict')}}"method="post">
+    <form action="{{ url_for('predict')}}" method="post">
 
       <div class="container pt-4 ">
         <div class="row">
@@ -190,7 +210,8 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="restecg">Resting electrocardiographic results </label>
-              <input type="text" class="form-control" name="restecg" placeholder="Enter Resting electrocardiographic results">
+              <input type="text" class="form-control" name="restecg"
+                placeholder="Enter Resting electrocardiographic results">
             </div>
           </div>
 
@@ -212,15 +233,17 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="Oldpeak">Oldpeak </label>
-              <input type="text" class="form-control" name="Oldpeak" placeholder=" depression induced by exercise relative to rest">
+              <input type="text" class="form-control" name="Oldpeak"
+                placeholder=" depression induced by exercise relative to rest">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="Slope">Slope </label>
-              <input type="text" class="form-control" name="Slope" placeholder=" The slope of the peak exercise ST segment">
+              <input type="text" class="form-control" name="Slope"
+                placeholder=" The slope of the peak exercise ST segment">
             </div>
-          </div>       
+          </div>
         </div>
         <div class="row">
           <div class="col-md-6">
@@ -237,101 +260,114 @@
           </div>
         </div>
         <div class="text-center">
-        <button type="submit" class="btn btn-success  mt-3 mb-3">Submit</button>
-      </div>
+          <button type="submit" class="btn btn-success  mt-3 mb-3">Submit</button>
+        </div>
       </div>
     </form>
-   
+
   </div>
 
 
-<div class="container mx-auto pt-4 pb-4">
-  <h4 style="color:rgb(0, 0, 0);">
-    {{ prediction_text }} </h4>
-</div>
-  
+  <!-- script to show the responce in alert after predicting  -->
+  {% if prediction_text %}    
+  <script>
+    alert("{{ prediction_text }}");
+  </script>
+  {% endif %}
 
 
-<!-- Footer -->
-<footer class="page-footer font-small blue pt-4 info-color" >
+  <!-- Footer -->
+  <footer class="page-footer font-small blue pt-4 info-color">
 
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
 
-    <!-- Grid row -->
-    <div class="row">
-     
-      <div class="col-md-6 mt-md-0 mt-3">
-        <!-- Content -->
-        <h5 class="text-uppercase" >Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+      <!-- Grid row -->
+      <div class="row">
+
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Footer Content</h5>
+          <p>Here you can use rows and columns to organize your footer content.</p>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
 
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
+      <!-- Grid row -->
 
     </div>
-    <!-- Grid row -->
+    <!-- Footer Links -->
 
-  </div>
-  <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 info-color-dark">© 2020 Copyright:
+      <a href="/"> Team HOPE </a>
+    </div>
+    <!-- Copyright -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3 info-color-dark">© 2020 Copyright:
-    <a href="/"> Team HOPE </a>
-  </div>
-  <!-- Copyright -->
+  </footer>
 
-</footer>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="../static/script.js"></script>
 
 </body>
 
