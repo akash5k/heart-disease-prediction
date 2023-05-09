@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | HOPE</title>
-  <link rel="icon" href="../static/images/page_title_icon.png" type="image/x-icon">
+  <link rel="icon" href="../static/images/page_title_logo.ico" type="image/x-icon">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -24,9 +24,8 @@
 <body>
   <!-- navbar -->
   <nav class="navbar navbar-dark  navbar-expand-lg fixed-top opaque-navbar">
-    <a class="navbar-brand" href="#">
-      <!-- <img src="your-logo.png" alt="Your Company Logo"> -->
-      <h3>HOPE</h3>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img  class="logo" height="40rem%"  src="../static/images/hope-nav-logo.png" alt="Your Company Logo">      
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +52,7 @@
 
 
   <!-- carousel -->
+ 
   <div class="bd-example">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -60,57 +60,58 @@
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner" style="height: 750px;">
-        <div class="carousel-item active">
-          <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="d-block w-100 h-100"
+      <div class="carousel-inner" >
+        <div class="carousel-item active c-item">
+          <img src="../static/images/carousel-1.jpg" class="d-block w-100 h-100 c-img"
             alt="carousel1">
           <!-- <img src="../static/images/carousel1.jpeg" class="d-block w-100" alt="carousel1"> -->
-          <div class="carousel-caption d-none d-md-block ">
-            <h5>When you need answers</h5>
-            <!-- <p>you know where to go</p> -->
+          <div class="carousel-caption" style="bottom: 150px !important;">
+            <h5>First slide label</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="d-block w-100 h-100"
+        <div class="carousel-item c-item">
+          <img src="../static/images/carousel-2.jpg" class="d-block w-100 h-100 c-img"
             alt="carousel1">
           <!-- <img src="../static/images/carousel2.jpg" class="d-block w-100" alt="..."> -->
-          <div class="carousel-caption d-none d-md-block ">
+          <div class="carousel-caption " style="bottom: 150px !important;">
             <h5>Second slide label</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="https://mdbootstrap.com/img/Photos/Others/images/77.jpg" class="d-block w-100 h-100"
+        <div class="carousel-item c-item">
+          <img src="../static/images/carousel-3.jpg" class="d-block w-100 h-100 c-img"
             alt="carousel1">
           <!-- <img src="../static/images/carousel3.jpg" class="d-block w-100" alt="..."> -->
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption " style="bottom: 150px !important;">
             <h5>Third slide label</h5>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </div>      
       </a>
 
-
     </div>
+    
   </div>
 
 
 
+
   <!-- body mid -->
-  <div class="container-fluid pt-4 pb-4">
+  <div class="container-fluid pt-4 pb-4 mt-4 mb-4">
     <div class="row">
-      <div class="col-md-5 mr-2">
-        <image src="../static/images/test your data.jpg" class="rounded mx-auto d-block" width="50%"></image>
+      <div class="col-md-6">
+        <image src="../static/images/test your data.jpg" class="rounded mx-auto d-block" width="100%" ></image>
       </div>
-      <div class="col-md-5 ml-2 mr-2 ">
+      <div class="col-md-5 ml-2  ">
         <h4>HOPE for Healthy Heart.</h4>
-        <p class="text-justify">A healthy heart is vital for maintaining overall health and wellness. By prioritizing
+        <p class="text-justify" style="font-size: 0.9rem;">A healthy heart is vital for maintaining overall health and wellness. By prioritizing
           heart health, you can improve your quality of life and reduce the risk of developing other chronic conditions
           such as diabetes and high blood pressure. Taking steps to maintain a healthy heart is one of the most
           important things you can do for your overall health and well-being.
 
-          <p class="text-justify">The Heart Observational Predictive Engine takes various user inputs and checks for the presence of heart
+          <p class="text-justify" style="font-size: 0.9rem;">The Heart Observational Predictive Engine takes various user inputs and checks for the presence of heart
           disease. Based on the inputs, HOPE can predict the likelihood of the presence of heart disease with a high
           degree of accuracy. If it predicts a high probability of heart disease, the user is advised to seek further
           medical attention and provide suggestions for preventative measures, such as lifestyle changes and medication
@@ -123,8 +124,8 @@
     </div>
   </div>
 
-
-  <div class="container card shadow-lg p-3 mb-5 bg-white rounded ">
+<!-- form -->
+  <div class="container card shadow-lg p-3 mb-5 bg-white rounded form_width">
     <div class="container pt-4 ">
       <div class="text-center ">
         <h3>FORM</h3>
@@ -145,15 +146,79 @@
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <!-- start -->
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Age</td>
+                    <td>Provide your age within the range of 29-77 years old.</td>
+                  </tr>
+                  <tr>
+                    <td>Sex</td>
+                    <td>Select your gender. Enter 1 for Male, enter 0 for Female.</td>
+                  </tr>
+                  <tr>
+                    <td>Chest pain level</td>
+                    <td>Enter 0 for Asymptotic, enter 2 for non-anginal pain, enter 3 for Typical angina.</td>
+                  </tr>
+                  <tr>
+                    <td>Trestbps</td>
+                    <td>Provide your Rest blood pressure. Example: 131.6</td>
+                  </tr>
+                  <tr>
+                    <td>Cholesterol level</td>
+                    <td>Provide your cholesterol level. Example: 246.3</td>
+                  </tr>
+                  <tr>
+                    <td>Fbs (Fasting blood sugar level)</td>
+                    <td>Enter 0 if blood sugar level is below 120, enter 1 if blood sugar level is above 120.</td>
+                  </tr>
+                  <tr>
+                    <td>Restecg</td>
+                    <td>According to your resting electrocardiographic results, enter 0 for probable or definite left ventricular hypertrophy, enter 2 for abnormal ecg results.</td>
+                  </tr>
+                  <tr>
+                    <td>Thalach</td>
+                    <td>Enter your maximum heart rate achieved during exercise or physical activity.</td>
+                  </tr>
+                  <tr>
+                    <td>Exercise induced angina</td>
+                    <td>Exercise induced angina or the chest pain and discomfort that occurs during exercise. Enter 1 if produced and 0 for none.</td>
+                  </tr>
+                  <tr>
+                    <td>Oldpeak</td>
+                    <td>ST depression induced by exercise relative to rest.</td>
+                  </tr>
+                  <tr>
+                    <td>Slope</td>
+                    <td>The slope of the peak exercise ST segment. Enter 0 for Unsloping peak, enter 1 for Flat slope, enter 2 for Down-sloping.</td>
+                  </tr>
+                  <tr>
+                    <td>Ca</td>
+                    <td>Number of major vessels.</td>
+                  </tr>
+                  <tr>
+                    <td>Thal</td>
+                    <td>The type of thalassemia you have. Enter 1 for fixed defect (Thalassemia), enter 2 for Normal, enter 3 for Reversible defect (Thalassemia Major).</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <!-- end -->
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
     <!-- form -->
     <!-- Action is where the data is sent. In our case, predict page.
      If action is omitted, it assumed to be the current page -->
@@ -164,13 +229,13 @@
           <div class="col col-md-6">
             <div class="form-group">
               <label for="age">Age</label>
-              <input type="text" class="form-control" name="age" placeholder="Enter you age">
+              <input type="text" class="form-control" name="age" placeholder="Enter you age" required>
             </div>
           </div>
           <div class="col col-md-6">
             <div class="form-group">
               <label for="sex">Sex</label>
-              <select id="inputState" name="sex" class="form-control">
+              <select id="inputState" name="sex" class="form-control" required>
                 <option selected>Choose...</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
@@ -183,19 +248,19 @@
           <div class="col md-6">
             <div class="form-group">
               <label for="cp">Chest Pain</label>
-              <input type="text" class="form-control" name="cp" placeholder="Enter chestpain level">
+              <input type="text" class="form-control" name="cp" placeholder="Enter chestpain level" required>
             </div>
           </div>
           <div class="col md-6">
             <div class="form-group">
               <label for="trestbps">Rest blood pressure</label>
-              <input type="text" class="form-control" name="trestbps" placeholder="Enter rest blood pressure">
+              <input type="text" class="form-control" name="trestbps" placeholder="Enter rest blood pressure" required>
             </div>
           </div>
           <div class="col md-6">
             <div class="form-group">
               <label for="chol">Cholesterol level</label>
-              <input type="text" class="form-control" name="chol" placeholder="Enter Cholesterol level">
+              <input type="text" class="form-control" name="chol" placeholder="Enter Cholesterol level" required>
             </div>
           </div>
         </div>
@@ -203,7 +268,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="fbs">Fasting blood sugar level </label>
-              <input type="text" class="form-control" name="fbs" placeholder="Enter fasting blood sugar level">
+              <input type="text" class="form-control" name="fbs" placeholder="Enter fasting blood sugar level" required>
             </div>
           </div>
 
@@ -211,21 +276,21 @@
             <div class="form-group">
               <label for="restecg">Resting electrocardiographic results </label>
               <input type="text" class="form-control" name="restecg"
-                placeholder="Enter Resting electrocardiographic results">
+                placeholder="Enter Resting electrocardiographic results" required>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="form-group">
-              <label for="thalach">Maximum heart rate achieved</label>
-              <input type="text" class="form-control" name="thalach" placeholder="Enter Maximum heart rate">
+              <label for="thalach">Thalach</label>
+              <input type="text" class="form-control" name="thalach" placeholder="Max Heart Rate during physical activity" required>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="form-group">
               <label for="exang">Exercise induced angina</label>
-              <input type="text" class="form-control" name="exang" placeholder="">
+              <input type="text" class="form-control" name="exang" placeholder="Chest pain and discomfort during exercise" required>
             </div>
           </div>
         </div>
@@ -234,14 +299,14 @@
             <div class="form-group">
               <label for="Oldpeak">Oldpeak </label>
               <input type="text" class="form-control" name="Oldpeak"
-                placeholder=" depression induced by exercise relative to rest">
+                placeholder=" depression induced by exercise relative to rest" required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="Slope">Slope </label>
               <input type="text" class="form-control" name="Slope"
-                placeholder=" The slope of the peak exercise ST segment">
+                placeholder=" The slope of the peak exercise ST segment" required>
             </div>
           </div>
         </div>
@@ -249,13 +314,13 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="Ca">Ca </label>
-              <input type="text" class="form-control" name="Ca" placeholder="Number of major vessels">
+              <input type="text" class="form-control" name="Ca" placeholder="Number of major vessels" required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="Thal">Thal </label>
-              <input type="text" class="form-control" name="Thal" placeholder="Defect type">
+              <input type="text" class="form-control" name="Thal" placeholder="Defect type" required>
             </div>
           </div>
         </div>
@@ -264,7 +329,7 @@
         </div>
       </div>
     </form>
-
+  </div>
   </div>
 
 
@@ -287,7 +352,8 @@
 
         <div class="col-md-6 mt-md-0 mt-3">
           <!-- Content -->
-          <h5 class="text-uppercase">Footer Content</h5>
+          <img src="../static/images/hope-icononly-white.png" alt="">
+          <h5 class="text-uppercase">Team HOPE</h5>
           <p>Here you can use rows and columns to organize your footer content.</p>
 
         </div>
@@ -349,7 +415,7 @@
     <!-- Footer Links -->
 
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3 info-color-dark">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3 info-color-dark">© 2023 Copyright:
       <a href="/"> Team HOPE </a>
     </div>
     <!-- Copyright -->

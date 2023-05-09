@@ -7,9 +7,30 @@ background-color: #2b2d42 !important;
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
 } */
-.navbar {
+/* .navbar {
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(10px);
+} */
+
+.carousel-caption{
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.c-item{
+  height : 712px;
+}
+
+.c-img{
+  height: 100%;
+  object-fit: cover;
+  filter : brightness(0.6);
+}
+
+.form_width{
+  max-width: 800px; /* set the maximum width for the form */
+  width: 100%; /* make sure the form fills the available space */
+  margin: 0 auto; /* center the form inside the container */
 }
 
 /* body{
@@ -111,3 +132,20 @@ body{
   font-family: 'Inconsolata', monospace;
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.mdata{
+  display: flex;
+  justify-content: start;
+}
+.mhead{
+  font-weight: bold;
+}
+
+/* .logo {
+  height: 16px;
+  max-width: 16px;
+} */

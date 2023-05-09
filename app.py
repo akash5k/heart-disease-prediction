@@ -1,9 +1,5 @@
 """
-Application that predicts heart disease percentage in the population of a town
-based on the number of bikers and smokers. 
-Trained on the data set of percentage of people biking 
-to work each day, the percentage of people smoking, and the percentage of 
-people with heart disease in an imaginary sample of 500 towns.
+Application that predicts heart disease
 """
 
 
@@ -43,7 +39,7 @@ def predict():
     output = prediction[0]
     # output = round(prediction[0], 2)
     if output == 1:
-        return render_template('index.html', prediction_text='OOPS !! Your heart may be diseased. :( ')      
+        return render_template('index.html', prediction_text='OOPS !! Your heart may be diseased.')      
     else:
         return render_template('index.html', prediction_text='CONGRATULATIONS !! You have a healthy heart.')
 
