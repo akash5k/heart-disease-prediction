@@ -43,14 +43,14 @@
           <a class="nav-link" href="../static/LearnMore.html">Learn More</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <button type="button" class="btn btn-light test" onclick="scrollToForm()">Test now</button>
         </li>
       </ul>
     </div>
   </nav>
-
-
-
+<div class="loader-wrapper">
+  <span class="loader"><span class="loader-inner"></span></span>
+</div>
   <!-- carousel -->
  
   <div class="bd-example">
@@ -125,13 +125,13 @@
   </div>
 
 <!-- form -->
-  <div class="container card shadow-lg p-3 mb-5 bg-white rounded form_width">
+  <div id="form-fill" class="container card shadow-lg p-3 mb-5 bg-white rounded form_width">
     <div class="container pt-4 ">
       <div class="text-center ">
-        <h3>FORM</h3>
+        <h3 >FORM</h3>
         <!-- pill trigger modal -->
-        <span class="badge badge-pill badge-primary " data-toggle="modal"
-          data-target="#exampleModalScrollable">Information</span>
+        <span class="badge badge-pill badge-primary pointer" data-toggle="modal"
+          data-target="#exampleModalScrollable">Instructions</span>
         <hr>
       </div>
       <!-- Modal -->
@@ -140,7 +140,7 @@
         <div class="modal-dialog modal-dialog-scrollable" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Insteuctions to fill the details</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -334,11 +334,21 @@
 
 
   <!-- script to show the responce in alert after predicting  -->
-  {% if prediction_text %}    
+  <!-- {% if prediction_text %}    
   <script>
     alert("{{ prediction_text }}");
   </script>
-  {% endif %}
+  {% endif %} -->
+
+  <script>
+    {% if prediction_text %}
+    // Check if the prediction text has not been displayed before showing the alert
+    if (!localStorage.getItem('predictionShown')) {
+        alert("{{ prediction_text }}");
+        localStorage.setItem('predictionShown', true);
+    }
+    {% endif %}
+</script>
 
 
   <!-- Footer -->

@@ -10,3 +10,8 @@ $(function () {
         $('.opaque-navbar').removeClass('opaque');
     }
 });
+
+function scrollToForm() {
+    var formElement = document.getElementById("form-fill");
+    formElement.scrollIntoView({ behavior: "smooth" });
+}

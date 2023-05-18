@@ -24,6 +24,7 @@ model = pickle.load(open('models\model_pickle', 'rb'))
 def home():
     return render_template('index.html')
 
+
 #You can use the methods argument of the route() decorator to handle different HTTP methods.
 #GET: A GET message is send, and the server returns data
 #POST: Used to send HTML form data to the server.
