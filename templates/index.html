@@ -12,12 +12,18 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- custom css -->
   <link rel="stylesheet" href="../static/style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-RrRxpCyjlksKwRHp1IX+6K3WpUC4uopI2IcL9vbuCSPVJzzqFePLfXKKB6AV+FAW" crossorigin="anonymous">
+
 
 <!-- google-fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Nunito+Sans:wght@600&display=swap"
       rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 </head>
 
@@ -48,9 +54,7 @@
       </ul>
     </div>
   </nav>
-<div class="loader-wrapper">
-  <span class="loader"><span class="loader-inner"></span></span>
-</div>
+
   <!-- carousel -->
  
   <div class="bd-example">
@@ -64,28 +68,25 @@
         <div class="carousel-item active c-item">
           <img src="../static/images/carousel-1.jpg" class="d-block w-100 h-100 c-img"
             alt="carousel1">
-          <!-- <img src="../static/images/carousel1.jpeg" class="d-block w-100" alt="carousel1"> -->
           <div class="carousel-caption" style="bottom: 150px !important;">
-            <h5>First slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5>Predicting Heart Disease</h5>
+            <p>Accurate Assessments for Early Detection</p>
           </div>
         </div>
         <div class="carousel-item c-item">
           <img src="../static/images/carousel-2.jpg" class="d-block w-100 h-100 c-img"
-            alt="carousel1">
-          <!-- <img src="../static/images/carousel2.jpg" class="d-block w-100" alt="..."> -->
+            alt="carousel1">          
           <div class="carousel-caption " style="bottom: 150px !important;">
-            <h5>Second slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5>Empowering Prevention</h5>
+            <p>Predicting Heart Disease for Proactive Care</p>
           </div>
         </div>
         <div class="carousel-item c-item">
           <img src="../static/images/carousel-3.jpg" class="d-block w-100 h-100 c-img"
-            alt="carousel1">
-          <!-- <img src="../static/images/carousel3.jpg" class="d-block w-100" alt="..."> -->
+            alt="carousel1">          
           <div class="carousel-caption " style="bottom: 150px !important;">
-            <h5>Third slide label</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h5>Your Heart's Future</h5>
+            <p>Predicting Disease Risks for Informed Decision-Making</p>
           </div>
         </div>
       </div>      
@@ -95,23 +96,20 @@
     
   </div>
 
-
-
-
   <!-- body mid -->
   <div class="container-fluid pt-4 pb-4 mt-4 mb-4">
     <div class="row">
       <div class="col-md-6">
-        <image src="../static/images/test your data.jpg" class="rounded mx-auto d-block" width="100%" ></image>
+        <image src="../static/images/test your data.jpg" class="rounded mx-auto d-block"  style="object-fit: cover; width: 80%; height: 82%;" ></image>
       </div>
       <div class="col-md-5 ml-2  ">
         <h4>HOPE for Healthy Heart.</h4>
-        <p class="text-justify" style="font-size: 0.9rem;">A healthy heart is vital for maintaining overall health and wellness. By prioritizing
+        <p class="text-justify" style="font-size: 0.95rem;">A healthy heart is vital for maintaining overall health and wellness. By prioritizing
           heart health, you can improve your quality of life and reduce the risk of developing other chronic conditions
           such as diabetes and high blood pressure. Taking steps to maintain a healthy heart is one of the most
           important things you can do for your overall health and well-being.
 
-          <p class="text-justify" style="font-size: 0.9rem;">The Heart Observational Predictive Engine takes various user inputs and checks for the presence of heart
+          <p class="text-justify" style="font-size: 0.95rem;">The Heart Observational Predictive Engine takes various user inputs and checks for the presence of heart
           disease. Based on the inputs, HOPE can predict the likelihood of the presence of heart disease with a high
           degree of accuracy. If it predicts a high probability of heart disease, the user is advised to seek further
           medical attention and provide suggestions for preventative measures, such as lifestyle changes and medication
@@ -140,7 +138,7 @@
         <div class="modal-dialog modal-dialog-scrollable" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalScrollableTitle">Insteuctions to fill the details</h5>
+              <h5 class="modal-title" id="exampleModalScrollableTitle">Instructions to fill the details</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -218,24 +216,27 @@
           </div>
         </div>
       </div>
+
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
     
     <!-- form -->
     <!-- Action is where the data is sent. In our case, predict page.
      If action is omitted, it assumed to be the current page -->
     <form action="{{ url_for('predict')}}" method="post">
-
       <div class="container pt-4 ">
         <div class="row">
           <div class="col col-md-6">
             <div class="form-group">
               <label for="age">Age</label>
-              <input type="text" class="form-control" name="age" placeholder="Enter you age" required>
+              <input type="text" class="form-control" name="age" placeholder="Enter you age" required oninput="updateProgress()">
             </div>
           </div>
           <div class="col col-md-6">
             <div class="form-group">
               <label for="sex">Sex</label>
-              <select id="inputState" name="sex" class="form-control" required>
+              <select id="inputState" name="sex" class="form-control" required oninput="updateProgress()">
                 <option selected>Choose...</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
@@ -248,19 +249,19 @@
           <div class="col md-6">
             <div class="form-group">
               <label for="cp">Chest Pain</label>
-              <input type="text" class="form-control" name="cp" placeholder="Enter chestpain level" required>
+              <input type="text" class="form-control" name="cp" placeholder="Enter chestpain level" required oninput="updateProgress()">
             </div>
           </div>
           <div class="col md-6">
             <div class="form-group">
               <label for="trestbps">Rest blood pressure</label>
-              <input type="text" class="form-control" name="trestbps" placeholder="Enter rest blood pressure" required>
+              <input type="text" class="form-control" name="trestbps" placeholder="Enter rest blood pressure" required oninput="updateProgress()">
             </div>
           </div>
           <div class="col md-6">
             <div class="form-group">
               <label for="chol">Cholesterol level</label>
-              <input type="text" class="form-control" name="chol" placeholder="Enter Cholesterol level" required>
+              <input type="text" class="form-control" name="chol" placeholder="Enter Cholesterol level" required oninput="updateProgress()">
             </div>
           </div>
         </div>
@@ -268,7 +269,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="fbs">Fasting blood sugar level </label>
-              <input type="text" class="form-control" name="fbs" placeholder="Enter fasting blood sugar level" required>
+              <input type="text" class="form-control" name="fbs" placeholder="Enter fasting blood sugar level" required oninput="updateProgress()">
             </div>
           </div>
 
@@ -276,21 +277,21 @@
             <div class="form-group">
               <label for="restecg">Resting electrocardiographic results </label>
               <input type="text" class="form-control" name="restecg"
-                placeholder="Enter Resting electrocardiographic results" required>
+                placeholder="Enter Resting electrocardiographic results" required oninput="updateProgress()">
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="form-group">
               <label for="thalach">Thalach</label>
-              <input type="text" class="form-control" name="thalach" placeholder="Max Heart Rate during physical activity" required>
+              <input type="text" class="form-control" name="thalach" placeholder="Max Heart Rate during physical activity" required oninput="updateProgress()">
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="form-group">
               <label for="exang">Exercise induced angina</label>
-              <input type="text" class="form-control" name="exang" placeholder="Chest pain and discomfort during exercise" required>
+              <input type="text" class="form-control" name="exang" placeholder="Chest pain and discomfort during exercise" required oninput="updateProgress()">
             </div>
           </div>
         </div>
@@ -299,14 +300,14 @@
             <div class="form-group">
               <label for="Oldpeak">Oldpeak </label>
               <input type="text" class="form-control" name="Oldpeak"
-                placeholder=" depression induced by exercise relative to rest" required>
+                placeholder=" depression induced by exercise relative to rest" required oninput="updateProgress()">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="Slope">Slope </label>
               <input type="text" class="form-control" name="Slope"
-                placeholder=" The slope of the peak exercise ST segment" required>
+                placeholder=" The slope of the peak exercise ST segment" required oninput="updateProgress()">
             </div>
           </div>
         </div>
@@ -314,13 +315,13 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="Ca">Ca </label>
-              <input type="text" class="form-control" name="Ca" placeholder="Number of major vessels" required>
+              <input type="text" class="form-control" name="Ca" placeholder="Number of major vessels" required oninput="updateProgress()">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="Thal">Thal </label>
-              <input type="text" class="form-control" name="Thal" placeholder="Defect type" required>
+              <input type="text" class="form-control" name="Thal" placeholder="Defect type" required oninput="updateProgress()">
             </div>
           </div>
         </div>
@@ -334,21 +335,22 @@
 
 
   <!-- script to show the responce in alert after predicting  -->
-  <!-- {% if prediction_text %}    
+  {% if prediction_text %}    
   <script>
     alert("{{ prediction_text }}");
   </script>
-  {% endif %} -->
+  {% endif %}
 
-  <script>
+
+  <!-- <script>
     {% if prediction_text %}
     // Check if the prediction text has not been displayed before showing the alert
     if (!localStorage.getItem('predictionShown')) {
         alert("{{ prediction_text }}");
         localStorage.setItem('predictionShown', true);
     }
-    {% endif %}
-</script>
+    {% endif %}
+</script> -->
 
 
   <!-- Footer -->
@@ -364,7 +366,7 @@
           <!-- Content -->
           <img src="../static/images/hope-icononly-white.png" alt="">
           <h5 class="text-uppercase">Team HOPE</h5>
-          <p>Here you can use rows and columns to organize your footer content.</p>
+          <p>Predicting Heart Disease for Proactive Care</p>
 
         </div>
         <!-- Grid column -->
@@ -398,21 +400,17 @@
         <div class="col-md-3 mb-md-0 mb-3">
 
           <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
+          <h5 class="text-uppercase">Contributers</h5>
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Link 1</a>
+              <a href="#!">Akash Parida</a>
+            <li>
+              <a href="#!">Animesh Padhy</a>
             </li>
             <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
+              <a href="#!">Tanuj Manuprit Xalxo</a>
+            </li>            
           </ul>
 
         </div>
