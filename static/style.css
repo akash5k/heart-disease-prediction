@@ -32,7 +32,7 @@ background-color: #2b2d42 !important;
 
 .carousel-caption {
   transform: translateY(-50%);
-  top: 50%;
+  top: 40%;
 }
 .carousel-caption h5{
   font-family: 'Bebas Neue', sans-serif;
