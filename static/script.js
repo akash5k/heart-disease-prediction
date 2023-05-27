@@ -45,6 +45,26 @@ $('.carousel').carousel({
       return filledCount;
     }
 
+    //a sweetAlert toast to show success status
+    function success_toast (){
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'bottom-start',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          
+          Toast.fire({
+            icon: 'success',
+            title: 'Details filled automatically.'
+          })
+    }
+
 
     document.getElementById('fill-disease-data').addEventListener('click', function() {
         document.getElementById('age').value = '56';
@@ -60,6 +80,8 @@ $('.carousel').carousel({
         document.getElementById('Slope').value = '1';
         document.getElementById('Ca').value = '1';
         document.getElementById('Thal').value = '1';
+        
+        success_toast();
       });
 
     document.getElementById('fill-healthy-data').addEventListener('click', function() {
@@ -76,4 +98,8 @@ $('.carousel').carousel({
         document.getElementById('Slope').value = '1';
         document.getElementById('Ca').value = '1';
         document.getElementById('Thal').value = '1';
+
+        success_toast();
       });
+
+      
