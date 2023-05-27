@@ -12,18 +12,42 @@ background-color: #2b2d42 !important;
   backdrop-filter: blur(10px);
 } */
 
+.opaque-navbar {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
+  height: 60px;
+  border-bottom: 0px;
+  transition: background-color .5s ease 0s;
+}
+.opaque-navbar.opaque {
+  background-color: #2E2E2E;
+  height: 60px;
+  transition: background-color .5s ease 0s;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .carousel-caption {
   transform: translateY(-50%);
-  top: 40%;
+  top: 50%;
 }
 .carousel-caption h5{
   font-family: 'Bebas Neue', sans-serif;
   font-size: 7rem;
   letter-spacing: 5px;
 }
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+  .carousel-caption h5 {
+    font-size: 4rem; /* Adjust the font size for mobile devices */
+  }
+}
 
 .c-item {
-  height: 712px;
+  height: 720px;
 }
 
 .c-img {
@@ -34,11 +58,8 @@ background-color: #2b2d42 !important;
 
 .form_width {
   max-width: 850px;
-  /* set the maximum width for the form */
   width: 100%;
-  /* make sure the form fills the available space */
   margin: 0 auto;
-  /* center the form inside the container */
 }
 
 .progress-bar {
@@ -78,24 +99,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.opaque-navbar {
-  background-color: rgba(0, 0, 0, 0.2);
-  /* Transparent = rgba(0,0,0,0) / Translucent = (0,0,0,0.5)  */
-  height: 60px;
-  border-bottom: 0px;
-  transition: background-color .5s ease 0s;
-}
-
-.opaque-navbar.opaque {
-  background-color: #2E2E2E;
-  height: 60px;
-  transition: background-color .5s ease 0s;
-}
-.nav-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .test{
   font-size: 0.9rem;
   width: 90px;
