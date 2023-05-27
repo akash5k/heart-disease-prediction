@@ -40,9 +40,9 @@ def predict():
     output = prediction[0]
     # output = round(prediction[0], 2)
     if output == 1:
-        return render_template('index.html', prediction_text='OOPS !! Your heart may be diseased.')      
+        return render_template('index.html', icon='warning',title='Oops..',prediction_text='Your heart may be diseased.',)      
     else:
-        return render_template('index.html', prediction_text='CONGRATULATIONS !! You have a healthy heart.')
+        return render_template('index.html', icon='success',title='Congratulations !',prediction_text='You have a healthy heart.')
 
  
 #When the Python interpreter reads a source file, it first defines a few special variables. 
@@ -54,4 +54,5 @@ def predict():
 #If we import this file (module) to another file then __name__ == app (which is the name of this python file).
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True, threaded=True)
+    # run on devices with same network with address 0.0.0.0 and port 5000

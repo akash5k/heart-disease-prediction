@@ -44,3 +44,36 @@ $('.carousel').carousel({
       }
       return filledCount;
     }
+
+
+    document.getElementById('fill-disease-data').addEventListener('click', function() {
+        document.getElementById('age').value = '56';
+        document.getElementById('sex').value = '1';
+        document.getElementById('cp').value = '2';
+        document.getElementById('trestbps').value = '130';
+        document.getElementById('chol').value = '256';
+        document.getElementById('fbs').value = '1';
+        document.getElementById('restecg').value = '0';
+        document.getElementById('thalach').value = '142';
+        document.getElementById('exang').value = '1';
+        document.getElementById('Oldpeak').value = '0.6';
+        document.getElementById('Slope').value = '1';
+        document.getElementById('Ca').value = '1';
+        document.getElementById('Thal').value = '1';
+      });
+
+    document.getElementById('fill-healthy-data').addEventListener('click', function() {
+        document.getElementById('age').value = '57';
+        document.getElementById('sex').value = '1';
+        document.getElementById('cp').value = '0';
+        document.getElementById('trestbps').value = '150';
+        document.getElementById('chol').value = '276';
+        document.getElementById('fbs').value = '0';
+        document.getElementById('restecg').value = '0';
+        document.getElementById('thalach').value = '112';
+        document.getElementById('exang').value = '1';
+        document.getElementById('Oldpeak').value = '0.6';
+        document.getElementById('Slope').value = '1';
+        document.getElementById('Ca').value = '1';
+        document.getElementById('Thal').value = '1';
+      });
