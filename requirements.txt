@@ -2,3 +2,5 @@
 Flask==2.2.3
 numpy==1.21.6
 gunicorn==19.7.1
+sklearn==1.2.2
+pandas==2.0.0
