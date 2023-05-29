@@ -156,4 +156,83 @@ body {
   font-weight: bold;
 }
 
+.contributers{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
 
+.custom-content {
+  display: flex;
+  justify-content: space-between;
+  width: 640px;
+  height: 300px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.custom-card {
+  cursor: pointer;
+  border-radius: 7px;
+  padding: 10px;
+  width: 200px; 
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in-out;
+  margin-right: 40px;
+}
+
+.custom-card:last-child {
+  margin-right: 0; 
+}
+
+.custom-card:hover {
+  transform: scale(1.03);
+}
+
+.custom-avatar {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  margin: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transition: 0.15s ease-in-out;
+}
+
+.custom-details {
+  margin-top: -15px;
+}
+
+.custom-details p {
+  font-size: 1rem;
+}
+.icons {
+  margin-top: 10px;
+}
+
+.icons a {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 5px;
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #00cc99;  
+}
+
+.custom-details {
+  margin-top: -15px;
+  font-family: "Flow Circular";
+}
+
+.custom-details p {
+  font-size: 1rem;
+}

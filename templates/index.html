@@ -19,6 +19,7 @@
   <!-- sweet-alert js -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
   <!-- google-fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -356,6 +357,41 @@
     </div>
   </div>
 
+<div class="pt-5">
+  <h3 class="font-semibold text-3xl text-center p-10">CONTRIBUTORS</h3>  
+  <div class="custom-content">
+    <div class="custom-card">      
+      <img src="..//static/images/contributers/Akash.jpg" alt="falcon" class="custom-avatar">
+      <h5>Akash Parida</h5>
+      <div class="custom-details">        
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/akash-parida-ap/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/akash5k" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="custom-card">
+      <img src="..//static/images/contributers/Animesh.jpg" alt="fox" class="custom-avatar">
+      <h5>Animesh Padhy</h5>
+      <div class="custom-details">        
+        <div class="icons">
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="custom-card">
+      <img src="..//static/images/contributers/Tanuj.jpg" alt="fish" class="custom-avatar">
+      <h5>Tanuj Xalxo</h5>
+      <div class="custom-details">       
+        <div class="icons">
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
   <!-- script to show the responce in alert after predicting  -->
   {% if prediction_text %}
@@ -369,92 +405,12 @@
   </script>
   {% endif %}
 
-
-  <!-- <script>
-    {% if prediction_text %}
-    // Check if the prediction text has not been displayed before showing the alert
-    if (!localStorage.getItem('predictionShown')) {
-        alert("{{ prediction_text }}");
-        localStorage.setItem('predictionShown', true);
-    }
-    {% endif %}
-</script> -->
-
-
   <!-- Footer -->
-  <footer class="page-footer font-small blue pt-4 info-color">
-
-    <!-- Footer Links -->
-    <div class="container-fluid text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <div class="col-md-6 mt-md-0 mt-3">
-          <!-- Content -->
-          <img src="../static/images/hope-icononly-white.png" alt="">
-          <h5 class="text-uppercase">Team HOPE</h5>
-          <p>Predicting Heart Disease for Proactive Care</p>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-          <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-          <!-- Links -->
-          <h5 class="text-uppercase">Contributers</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Akash Parida</a>
-            <li>
-              <a href="#!">Animesh Padhy</a>
-            </li>
-            <li>
-              <a href="#!">Tanuj Manuprit Xalxo</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
+  <footer class="page-footer font-small blue pt-4 info-color">   
+   
     <div class="footer-copyright text-center py-3 info-color-dark">© 2023 Copyright:
       <a href="/"> Team HOPE </a>
-    </div>
-    <!-- Copyright -->
+    </div>  
 
   </footer>
 
