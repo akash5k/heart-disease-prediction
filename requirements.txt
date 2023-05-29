@@ -1,3 +1,4 @@
 # PYTHON_VERSION==3.11.2
 Flask==2.2.3
 numpy==1.21.6
+gunicorn==19.7.1
