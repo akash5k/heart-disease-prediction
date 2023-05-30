@@ -11,7 +11,6 @@ import pickle
 app = Flask(__name__)
 
 #Load the trained model. (Pickle file)
-# model = pickle.load(open('models\model_pickle', 'rb'))
 model = pickle.load(open('models/model_pickle', 'rb'))
 
 
