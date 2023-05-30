@@ -1,16 +1,3 @@
-/* .navbar{
-background-color: #2b2d42 !important;
-} */
-/* .navbar {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.8); 
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px);
-} */
-/* .navbar {
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-} */
 
 .opaque-navbar {
   background-color: rgba(0, 0, 0, 0.2);
@@ -42,7 +29,8 @@ background-color: #2b2d42 !important;
 /* Media query for mobile devices */
 @media only screen and (max-width: 480px) {
   .carousel-caption h5 {
-    font-size: 4rem; /* Adjust the font size for mobile devices */
+    font-size: 4rem; 
+    /* Adjust the font size for mobile devices */
   }
 }
 
@@ -156,22 +144,15 @@ body {
   font-weight: bold;
 }
 .text-with-background {
-  background-image: url("../static/images/LearnMore_img.jpg"); /* Replace "image.jpg" with the path to your background image */
+  background-image: url("../static/images/LearnMore_img.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
-  color: #fefefe; /* Set the text color to contrast with the background image */
+  color: #fefefe; 
   padding: 50px;
 }
 
-.text-with-background2 {
-  background-image: url("../static/images/About_img.jpg"); /* Replace "image.jpg" with the path to your background image */
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  color: #fefefe; /* Set the text color to contrast with the background image */
-  padding: 50px;
-}
+
 
 .contributers{
   font-family: 'Bebas Neue', sans-serif;
@@ -259,4 +240,34 @@ body {
     justify-items: center;
     display: grid;
 
+}
+
+.imgabt {
+  position:relative;
+  width: 100%;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  margin: 0px;
+  padding: 0px;
+}
+
+.backgrnd-image {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+.overlay-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 30%; /* Adjust the maximum width as needed */
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .overlay-image {
+    max-width: 40%; /* Adjust the maximum width as needed for smaller screens */
+    max-height: 60%;
+  }
 }
