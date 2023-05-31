@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "app.py", "use": "@vercel/python" },
+      { "src": "models/model_pickle.pkl", "use": "@vercel/static" }
+    ],
+    "routes": [
+      { "src": "/static/(.*)", "dest": "/static/$1" },
+      { "src": "/predict", "dest": "/app.py" },
+      { "src": "/(.*)", "dest": "/app.py" }
+    ],
+    "env": {
+      "PYTHONUNBUFFERED": "true"
+    }
+  }
+  
