@@ -1,8 +1,8 @@
 {
     "version": 2,
     "builds": [
-      { "src": "app.py", "use": "@vercel/python" },
-      { "src": "models/model_pickle.pkl", "use": "@vercel/static" }
+      { "src": "app.py", "use": "@vercel/python" }
+      
     ],
     "routes": [
       { "src": "/static/(.*)", "dest": "/static/$1" },
